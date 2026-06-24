@@ -40,7 +40,7 @@ uploadResume() {
   formData.append("file", this.selectedFile);
 
   this.http.post(
-    "http://localhost:8081/resume/upload",
+    "https://ai-resume.onrender.com/resume/upload",
     formData
   ).subscribe({
 
