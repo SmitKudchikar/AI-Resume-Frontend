@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h1>AI Resume Analyzer</h1>
+
+      <input
+        type="file"
+        accept=".pdf"
+        (change)="onFileSelected($event)">
+
+      <button (click)="uploadResume()">
+        Upload & Analyze PDF
+      </button>
+
+  <div class="results">
+
+    <div class="card">
+      <h2>Uploaded Resume</h2>
+      <pre>{{ resumeContent }}</pre>
+    </div>
+
+    <div class="card">
+      <h2>AI Feedback</h2>
+      <pre>{{ feedback }}</pre>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="score-card">
+  <h2>Resume Score</h2>
+  <span>{{ score }}/100</span>
+
+  <h1>DEBUG SCORE = {{ score }}</h1>
+</div>
