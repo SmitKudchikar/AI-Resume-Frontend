@@ -8,7 +8,7 @@ export class ResumeService {
 
   private http = inject(HttpClient);
 
-  private apiUrl = 'http://localhost:8081/resume';
+  private apiUrl = 'https://ai-resume.onrender.com';
 
   analyzeResume(resumeText: string) {
     return this.http.post(
