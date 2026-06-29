@@ -40,7 +40,7 @@ export class ResumeForm {
     formData.append('file', this.selectedFile);
 
     this.http.post(
-      'https://ai-resume-eowq.onrender.com/resume/upload',
+      'https://ai-resume-eowq.onrender.com/resume/analyze',
       formData
     ).subscribe({
 
