@@ -22,11 +22,9 @@
     <p>DEBUG RESPONSE SCORE = {{ score }}</p>
 <p>DEBUG RESPONSE STATUS = {{ status }}</p>
 
-    <button
-        *ngIf="score >= 50"
-        class="btn btn-success">
-        Proceed to Assessment
-    </button>
+<button (click)="proceedToAssessment()">
+  Proceed to Assessment
+</button>
 
 
 

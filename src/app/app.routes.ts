@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
-
-import { ResumeForm } from './components/resume-form/resume-form';
 import { AssessmentComponent } from './components/assesment/assessment.component';
+import { ResumeForm } from './components/resume-form/resume-form';
 
 export const routes: Routes = [
   {

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resume-form',
@@ -21,18 +21,18 @@ export class ResumeForm {
   router: any;
 
   constructor(
-    private http: HttpClient
-  ) {}
-
-  
+    private http: HttpClient,
+    private router_service: Router
+  ) {
+    this.router = router_service;
+  }
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }
 
-
   proceedToAssessment() {
-  this.router.navigate(['/assessment']);
+    this.router.navigate(['/assessment']);
   }
   
   uploadResume() {
