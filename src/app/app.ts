@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ResumeForm } from "./components/resume-form/resume-form";
 
 @Component({
   selector: 'app-root',
