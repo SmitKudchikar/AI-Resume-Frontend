@@ -2,26 +2,30 @@
 
   <h2>Technical Assessment</h2>
 
-  <div *ngFor="let q of questions" class="question-card">
+  @for (q of questions; track q.id) {
+    <div class="question-card">
 
-    <h4>{{ q.id }}. {{ q.question }}</h4>
+      <h4>{{ q.id }}. {{ q.question }}</h4>
 
-    <div *ngFor="let option of q.options">
+      @for (option of q.options; track option) {
+        <div>
 
-      <label>
-        <input
-          type="radio"
-          [name]="'question' + q.id"
-          [value]="option"
-          [checked]="answers[q.id] === option"
-          (change)="answers[q.id] = option">
+          <label>
+            <input
+              type="radio"
+              [name]="'question' + q.id"
+              [value]="option"
+              [checked]="answers[q.id] === option"
+              (change)="answers[q.id] = option">
 
-        {{ option }}
-      </label>
+            {{ option }}
+          </label>
+
+        </div>
+      }
 
     </div>
-
-  </div>
+  }
 
   <button (click)="submitAssessment()">
     Submit Assessment

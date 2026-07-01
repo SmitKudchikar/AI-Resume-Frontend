@@ -18,6 +18,7 @@ export class ResumeForm {
 
   score = 0;
   status = '';
+  router: any;
 
   constructor(
     private http: HttpClient
@@ -29,6 +30,11 @@ export class ResumeForm {
     this.selectedFile = event.target.files[0];
   }
 
+
+  proceedToAssessment() {
+  this.router.navigate(['/assessment']);
+  }
+  
   uploadResume() {
 
     if (!this.selectedFile) {
