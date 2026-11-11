@@ -31,7 +31,10 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "localhost:4200",
+                "deployment-error-fix-resume-frontend.v0.build"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts"
